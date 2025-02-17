@@ -37,12 +37,12 @@ jobs:
         run: |
           source .venv/bin/activate
           if [[ ${{ matrix.os }} == macos-* ]]; then
-            uv python setup.py bdist_mac
+            python setup.py bdist_mac
           elif [[ ${{ matrix.os }} == windows-* ]]; then
-            uv python setup.py bdist_msi
+            python setup.py bdist_msi
           else
             # python setup.py bdist_appimage
-            uv python setup.py build
+            python setup.py build
           fi
 
       - name: Upload executable
