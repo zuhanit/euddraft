@@ -35,6 +35,7 @@ jobs:
             uv pip install -r pyprojectmac.toml
           else 
             uv pip install -r pyproject.toml
+          fi
 
       - name: Freeze app
         run: |
