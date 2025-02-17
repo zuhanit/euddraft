@@ -32,7 +32,7 @@ jobs:
           uv venv
           uv pip install -r pyproject.toml
           if [[ ${{ matrix.os }} == windows-* ]]; then          
-            .venv\\Scripts\\activate.bat
+            .venv\\Scripts\\activate
             uv pip install -r pyproject.toml
             uv pip install eudplib
           else
@@ -46,7 +46,7 @@ jobs:
             source .venv/bin/activate
             python setup.py bdist_mac
           elif [[ ${{ matrix.os }} == windows-* ]]; then
-            .venv\\Scripts\\activate.bat
+            .venv\\Scripts\\activate
             python setup.py bdist_msi
           else
             # python setup.py bdist_appimage
