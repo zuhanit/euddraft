@@ -35,7 +35,7 @@ jobs:
             .venv\\Scripts\\activate
             uv pip install -r pyproject.toml
             uv pip install eudplib
-          elif [[ ${{ matrix.os }} == macos-* ]] then
+          else
             source .venv/bin/activate
             uv pip install eudplib-0.80.0-cp310-abi3-macosx_11_0_arm64.whl
           fi
