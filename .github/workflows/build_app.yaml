@@ -43,11 +43,14 @@ jobs:
       - name: Freeze app
         run: |
           if [[ ${{ matrix.os }} == macos-* ]]; then
+            source .venv/bin/activate
             python setup.py bdist_mac
           elif [[ ${{ matrix.os }} == windows-* ]]; then
+            .venv\\Scripts\\activate.bat
             python setup.py bdist_msi
           else
             # python setup.py bdist_appimage
+            source .venv/bin/activate
             python setup.py build
           fi
 
