@@ -32,9 +32,8 @@ jobs:
           uv venv
           uv pip install -r pyproject.toml
           if [[ ${{ matrix.os }} == windows-* ]]; then          
-            .venv\\Scripts\\activate
-            uv pip install -r pyproject.toml
             source .venv/bin/activate
+            uv pip install -r pyproject.toml
           else
             source .venv/bin/activate
             uv pip install eudplib-0.80.0-cp310-abi3-macosx_11_0_arm64.whl
