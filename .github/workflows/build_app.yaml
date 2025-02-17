@@ -31,8 +31,8 @@ jobs:
         run: |
           uv venv
           uv pip install -r pyproject.toml
-          if [[ ${{ matrix.os }} == windows-* ]]; then          
-            .venv\Scripts\activate
+          if [[ ${{ matrix.os }} == windows-* ]] then          
+            .venv\\Scripts\\activate
             uv pip install -r pyproject.toml
             uv pip install eudplib
           elif [[ ${{ matrix.os }} == macos-* ]] then
