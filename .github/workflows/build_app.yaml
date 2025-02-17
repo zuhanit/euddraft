@@ -45,7 +45,7 @@ jobs:
             source .venv/bin/activate
             python setup.py bdist_mac
           elif [[ ${{ matrix.os }} == windows-* ]]; then
-            .venv\\Scripts\\activate
+            source .venv/Scripts/activate
             python setup.py bdist_msi
           else
             # python setup.py bdist_appimage
