@@ -31,7 +31,10 @@ jobs:
         run: |
           uv venv
           source .venv/bin/activate
-          uv pip install -r pyproject.toml
+          if [[ ${{ matrix.os }} == macos-* ]]; then
+            uv pip install -r pyprojectmac.toml
+          else 
+            uv pip install -r pyproject.toml
 
       - name: Freeze app
         run: |
