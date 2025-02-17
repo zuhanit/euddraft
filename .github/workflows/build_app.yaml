@@ -32,7 +32,7 @@ jobs:
           uv venv
           uv pip install -r pyproject.toml
           if [[ ${{ matrix.os }} == windows-* ]]; then          
-            source .venv/bin/activate
+            source .venv/Scripts/activate
             uv pip install -r pyproject.toml
           else
             source .venv/bin/activate
