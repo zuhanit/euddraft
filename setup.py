@@ -22,6 +22,7 @@ build_exe_options = {
     "optimize": 2,
     "include_msvcr": True,
     "include_files": [
+        "libepScriptLib.dylib",
         "libepScriptLib.dll",
         "license.txt",
         "plugins",
