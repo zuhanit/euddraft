@@ -9,7 +9,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = ">= 3.10, < 3.14"
 cx-Freeze = "^7.2.0"
-eudplib = { file = "/Volumes/External/eudplib/src/rust/target/wheels/eudplib-0.80.0-cp310-abi3-macosx_11_0_arm64.whl" }
+eudplib = { file = "eudplib-0.80.0-cp310-abi3-macosx_11_0_arm64.whl" }
 rich = "^13.8.1"
 openpyxl = "^3.1.3"
 typing_extensions = "^4.12.2"
