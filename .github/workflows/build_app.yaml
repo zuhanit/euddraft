@@ -37,6 +37,7 @@ jobs:
             uv pip install eudplib-0.80.0-cp310-abi3-macosx_11_0_arm64.whl
           else 
             source .venv/bin/activate
+            sudo apt-get update && sudo apt-get install -y libbz2-dev
             uv pip install eudplib-0.80.0-cp310-abi3-manylinux_2_34_x86_64.whl
           fi
 
